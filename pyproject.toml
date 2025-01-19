@@ -1,30 +1,66 @@
+[project]
+name = "poetry-update"
+version = "0.1.0"
+description = "A CLI tool to safely update Poetry packages to their latest versions."
+requires-python = ">=3.10,<4.0"
+authors = [
+    { name = "Raheel Siddiqui", email = "raheelsiddiqui365@gmail.com" }
+]
+license = { text = "MIT" }
+readme = "README.md"
+keywords = ["poetry", "dependency", "update", "packages", "automation", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Homepage = "https://github.com/rawheel/poetry-update"
+Repository = "https://github.com/rawheel/poetry-update"
+Documentation = "https://github.com/rawheel/poetry-update#readme"
+Changelog = "https://github.com/rawheel/poetry-update/blob/main/CHANGELOG.md"
+
 [tool.poetry]
 name = "poetry-update"
 version = "0.1.0"
-description = "A CLI tool to safely update Poetry packages"
-authors = ["Your Name <your.email@example.com>"]
+description = "A CLI tool to safely update Poetry packages to their latest versions"
+authors = ["Raheel Siddiqui <raheelsiddiqui365@gmail.com>"]
 readme = "README.md"
-packages = [{include = "poetry_update"}]
+license = "MIT"
+packages = [{ include = "poetry_update" }]
 
 [tool.poetry.dependencies]
-python = "^3.8"
-click = "^8.1.8"
-loguru = "^0.7.3"
-toml = "^0.10.2"
+python = ">=3.10,<4.0"
+click = ">=8.1.8,<9.0.0"
+loguru = ">=0.7.3,<0.8.0"
+toml = ">=0.10.2,<0.11.0"
+packaging = ">=24.0"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.3.4"
-pytest-mock = "^3.11.1"
+pytest = ">=8.3.4,<9.0.0"
+pytest-mock = ">=3.11.1,<4.0.0"
+coverage = ">=7.4.0,<8.0.0"
 
 [tool.poetry.scripts]
 poetry-update = "poetry_update.cli:main"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.9.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-markers = [
-    "integration: marks tests as integration tests (deselect with '-m \"not integration\"')"
-]
+addopts = ["-ra", "--strict-config", "--strict-markers"]
 testpaths = ["tests"]
+markers = [
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests"
+]
