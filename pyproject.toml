@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "poetry-update"
+version = "0.1.0"
+description = "A CLI tool to safely update Poetry packages"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "poetry_update"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^8.1.8"
+loguru = "^0.7.3"
+toml = "^0.10.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+pytest-mock = "^3.11.1"
+
+[tool.poetry.scripts]
+poetry-update = "poetry_update.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: marks tests as integration tests (deselect with '-m \"not integration\"')"
+]
+testpaths = ["tests"]
