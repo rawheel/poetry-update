@@ -1,6 +1,6 @@
 [project]
 name = "poetry-update"
-version = "0.1.0"
+version = "0.1.1"
 description = "A CLI tool to safely update Poetry packages to their latest versions."
 requires-python = ">=3.10,<4.0"
 authors = [
@@ -31,7 +31,7 @@ Changelog = "https://github.com/rawheel/poetry-update/blob/main/CHANGELOG.md"
 
 [tool.poetry]
 name = "poetry-update"
-version = "0.1.0"
+version = "0.1.1"
 description = "A CLI tool to safely update Poetry packages to their latest versions"
 authors = ["Raheel Siddiqui <raheelsiddiqui365@gmail.com>"]
 readme = "README.md"
