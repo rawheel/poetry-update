@@ -1,7 +1,12 @@
 # Poetry Update
 
+
+<img width="726" alt="poetry-update" src="https://github.com/user-attachments/assets/eab588e1-9513-401f-aca4-eb6d144ccc7e"/>
+
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PyPI version](https://badge.fury.io/py/poetry-update.svg)](https://badge.fury.io/py/poetry-update)
+
 
 A command-line tool that simplifies Poetry package updates by performing safe, dependency-aware version bumps. Never worry about breaking your project's dependencies again!
 
